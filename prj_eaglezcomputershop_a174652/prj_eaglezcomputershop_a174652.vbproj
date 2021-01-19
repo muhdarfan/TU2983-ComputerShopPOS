@@ -14,6 +14,21 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -97,10 +112,10 @@
     <Compile Include="frm_customerlist_a174652.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_insertorder_a174652.Designer.vb">
-      <DependentUpon>frm_insertorder_a174652.vb</DependentUpon>
+    <Compile Include="frm_makeorder_a174652.Designer.vb">
+      <DependentUpon>frm_makeorder_a174652.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_insertorder_a174652.vb">
+    <Compile Include="frm_makeorder_a174652.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_insertproduct_a174652.Designer.vb">
@@ -140,6 +155,12 @@
     <Compile Include="frm_managestaff_a174652.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_splashscreen_a174652.Designer.vb">
+      <DependentUpon>frm_splashscreen_a174652.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_splashscreen_a174652.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ModGlobal.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -157,10 +178,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="frm_orderdetail_a174652.Designer.vb">
-      <DependentUpon>frm_orderdetail_a174652.vb</DependentUpon>
+    <Compile Include="frm_vieworder_a174652.Designer.vb">
+      <DependentUpon>frm_vieworder_a174652.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_orderdetail_a174652.vb">
+    <Compile Include="frm_vieworder_a174652.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_orderlist_a174652.Designer.vb">
@@ -192,8 +213,8 @@
     <EmbeddedResource Include="frm_customerlist_a174652.resx">
       <DependentUpon>frm_customerlist_a174652.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_insertorder_a174652.resx">
-      <DependentUpon>frm_insertorder_a174652.vb</DependentUpon>
+    <EmbeddedResource Include="frm_makeorder_a174652.resx">
+      <DependentUpon>frm_makeorder_a174652.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_insertproduct_a174652.resx">
       <DependentUpon>frm_insertproduct_a174652.vb</DependentUpon>
@@ -213,14 +234,17 @@
     <EmbeddedResource Include="frm_managestaff_a174652.resx">
       <DependentUpon>frm_managestaff_a174652.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_splashscreen_a174652.resx">
+      <DependentUpon>frm_splashscreen_a174652.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_orderdetail_a174652.resx">
-      <DependentUpon>frm_orderdetail_a174652.vb</DependentUpon>
+    <EmbeddedResource Include="frm_vieworder_a174652.resx">
+      <DependentUpon>frm_vieworder_a174652.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_orderlist_a174652.resx">
       <DependentUpon>frm_orderlist_a174652.vb</DependentUpon>
@@ -267,8 +291,21 @@
     <None Include="Resources\shopping-bag.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\bg_splash.jpg" />
     <None Include="bin\Debug\pictures\no-photo.png" />
     <Content Include="laptop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

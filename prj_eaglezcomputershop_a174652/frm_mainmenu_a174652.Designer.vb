@@ -37,6 +37,7 @@ Partial Class frm_mainmenu_a174652
         Me.addCustomerBtn = New System.Windows.Forms.Button()
         Me.orderPanel = New System.Windows.Forms.Panel()
         Me.productPanel = New System.Windows.Forms.Panel()
+        Me.catalogProductButton = New System.Windows.Forms.Button()
         Me.listProductBtn = New System.Windows.Forms.Button()
         Me.manageProductBtn = New System.Windows.Forms.Button()
         Me.addProductBtn = New System.Windows.Forms.Button()
@@ -48,7 +49,10 @@ Partial Class frm_mainmenu_a174652
         Me.customerTimer = New System.Windows.Forms.Timer(Me.components)
         Me.productTimer = New System.Windows.Forms.Timer(Me.components)
         Me.staffTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.catalogProductButton = New System.Windows.Forms.Button()
+        Me.orderTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.makeOrderBtn = New System.Windows.Forms.Button()
+        Me.viewOrderBtn = New System.Windows.Forms.Button()
+        Me.listOrderBtn = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         Me.customerPanel.SuspendLayout()
         Me.orderPanel.SuspendLayout()
@@ -191,6 +195,9 @@ Partial Class frm_mainmenu_a174652
         '
         'orderPanel
         '
+        Me.orderPanel.Controls.Add(Me.listOrderBtn)
+        Me.orderPanel.Controls.Add(Me.viewOrderBtn)
+        Me.orderPanel.Controls.Add(Me.makeOrderBtn)
         Me.orderPanel.Controls.Add(Me.orderBtn)
         Me.orderPanel.Location = New System.Drawing.Point(162, 101)
         Me.orderPanel.MinimumSize = New System.Drawing.Size(104, 64)
@@ -210,6 +217,15 @@ Partial Class frm_mainmenu_a174652
         Me.productPanel.Name = "productPanel"
         Me.productPanel.Size = New System.Drawing.Size(104, 64)
         Me.productPanel.TabIndex = 9
+        '
+        'catalogProductButton
+        '
+        Me.catalogProductButton.Location = New System.Drawing.Point(0, 70)
+        Me.catalogProductButton.Name = "catalogProductButton"
+        Me.catalogProductButton.Size = New System.Drawing.Size(104, 32)
+        Me.catalogProductButton.TabIndex = 10
+        Me.catalogProductButton.Text = "Catalog"
+        Me.catalogProductButton.UseVisualStyleBackColor = True
         '
         'listProductBtn
         '
@@ -302,14 +318,36 @@ Partial Class frm_mainmenu_a174652
         '
         Me.staffTimer.Interval = 40
         '
-        'catalogProductButton
+        'orderTimer
         '
-        Me.catalogProductButton.Location = New System.Drawing.Point(0, 70)
-        Me.catalogProductButton.Name = "catalogProductButton"
-        Me.catalogProductButton.Size = New System.Drawing.Size(104, 32)
-        Me.catalogProductButton.TabIndex = 10
-        Me.catalogProductButton.Text = "Catalog"
-        Me.catalogProductButton.UseVisualStyleBackColor = True
+        Me.orderTimer.Interval = 40
+        '
+        'makeOrderBtn
+        '
+        Me.makeOrderBtn.Location = New System.Drawing.Point(0, 70)
+        Me.makeOrderBtn.Name = "makeOrderBtn"
+        Me.makeOrderBtn.Size = New System.Drawing.Size(104, 32)
+        Me.makeOrderBtn.TabIndex = 4
+        Me.makeOrderBtn.Text = "Make Order"
+        Me.makeOrderBtn.UseVisualStyleBackColor = True
+        '
+        'viewOrderBtn
+        '
+        Me.viewOrderBtn.Location = New System.Drawing.Point(0, 108)
+        Me.viewOrderBtn.Name = "viewOrderBtn"
+        Me.viewOrderBtn.Size = New System.Drawing.Size(104, 32)
+        Me.viewOrderBtn.TabIndex = 5
+        Me.viewOrderBtn.Text = "View Order"
+        Me.viewOrderBtn.UseVisualStyleBackColor = True
+        '
+        'listOrderBtn
+        '
+        Me.listOrderBtn.Location = New System.Drawing.Point(0, 146)
+        Me.listOrderBtn.Name = "listOrderBtn"
+        Me.listOrderBtn.Size = New System.Drawing.Size(104, 32)
+        Me.listOrderBtn.TabIndex = 6
+        Me.listOrderBtn.Text = "List Order"
+        Me.listOrderBtn.UseVisualStyleBackColor = True
         '
         'frm_mainmenu_a174652
         '
@@ -365,4 +403,8 @@ Partial Class frm_mainmenu_a174652
     Friend WithEvents productTimer As Timer
     Friend WithEvents staffTimer As Timer
     Friend WithEvents catalogProductButton As Button
+    Friend WithEvents orderTimer As Timer
+    Friend WithEvents listOrderBtn As Button
+    Friend WithEvents viewOrderBtn As Button
+    Friend WithEvents makeOrderBtn As Button
 End Class

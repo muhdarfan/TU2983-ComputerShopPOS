@@ -2,6 +2,7 @@
 
 Module ModGlobal
     Public DB As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='DB_EAGLEZCOMPUTERSHOP_A174652.accdb';Persist Security Info=False;"
+    Public connection2 As New OleDb.OleDbConnection(DB)
 
     Public Function run_sql_query(mysql As String) As DataTable
         Dim mydatable As New DataTable

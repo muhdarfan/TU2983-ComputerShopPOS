@@ -5,20 +5,12 @@
         grd_order.Columns(0).DefaultCellStyle.Format = "\ODR000"
         grd_order.Columns(1).HeaderText = "Customer ID"
         grd_order.Columns(1).DefaultCellStyle.Format = "\C000"
-        grd_order.Columns(2).HeaderText = "Order Date"
-        grd_order.Columns(3).HeaderText = "Staff ID"
-        grd_order.Columns(3).DefaultCellStyle.Format = "\EMP000"
+        grd_order.Columns(3).HeaderText = "Order Date"
+        grd_order.Columns(2).HeaderText = "Staff ID"
+        grd_order.Columns(2).DefaultCellStyle.Format = "\EMP000"
     End Sub
 
     Private Sub backBtn_Click(sender As Object, e As EventArgs) Handles backBtn.Click
         Me.Close()
-    End Sub
-
-    Private Sub lbl_title_Click(sender As Object, e As EventArgs) Handles lbl_title.Click
-
-    End Sub
-
-    Private Sub grd_order_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grd_order.CellContentClick
-
     End Sub
 End Class

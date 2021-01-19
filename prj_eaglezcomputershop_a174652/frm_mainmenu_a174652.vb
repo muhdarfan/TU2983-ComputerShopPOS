@@ -2,6 +2,7 @@
     Dim cPanel As Integer = 64
     Dim pPanel As Integer = 64
     Dim sPanel As Integer = 64
+    Dim oPanel As Integer = 64
     Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbl_time.Text = Date.Now.ToString("d MMM yyyy")
     End Sub
@@ -22,7 +23,8 @@
     End Sub
 
     Private Sub orderBtn_Click(sender As Object, e As EventArgs) Handles orderBtn.Click
-        frm_orderdetail_a174652.ShowDialog()
+        ClosePanel()
+        orderTimer.Start()
     End Sub
 
     Private Sub listCustomerBtn_Click(sender As Object, e As EventArgs) Handles listCustomerBtn.Click
@@ -71,6 +73,17 @@
         frm_managestaff_a174652.ShowDialog()
     End Sub
 
+    Private Sub makeOrderBtn_Click(sender As Object, e As EventArgs) Handles makeOrderBtn.Click
+        frm_makeorder_a174652.ShowDialog()
+    End Sub
+
+    Private Sub viewOrderBtn_Click(sender As Object, e As EventArgs) Handles viewOrderBtn.Click
+        frm_vieworder_a174652.ShowDialog()
+    End Sub
+
+    Private Sub listOrderBtn_Click(sender As Object, e As EventArgs) Handles listOrderBtn.Click
+        frm_orderlist_a174652.ShowDialog()
+    End Sub
     Private Sub customerTimer_Tick(sender As Object, e As EventArgs) Handles customerTimer.Tick
         If customerPanel.Height > 180 Then
             customerTimer.Stop()
@@ -98,16 +111,29 @@
         End If
     End Sub
 
+    Private Sub orderTimer_Tick(sender As Object, e As EventArgs) Handles orderTimer.Tick
+        If orderPanel.Height > 180 Then
+            orderTimer.Stop()
+        Else
+            Me.orderPanel.Size = New Size(Me.orderPanel.Size.Width, oPanel)
+            oPanel += 70
+        End If
+    End Sub
+
     Private Sub ClosePanel() Handles MyBase.Click, mainPanel.Click
         productTimer.Stop()
         customerTimer.Stop()
         staffTimer.Stop()
+        orderTimer.Stop()
 
         productPanel.Size = productPanel.MinimumSize
         customerPanel.Size = customerPanel.MinimumSize
         staffPanel.Size = staffPanel.MinimumSize
+        orderPanel.Size = orderPanel.MinimumSize
         pPanel = 64
         cPanel = 64
         sPanel = 64
+        oPanel = 64
     End Sub
+
 End Class

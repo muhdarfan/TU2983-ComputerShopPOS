@@ -32,7 +32,12 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.EagleZ_Computer_Shop.frm_insertorder_a174652
+            Me.MainForm = Global.EagleZ_Computer_Shop.frm_mainmenu_a174652
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+        Protected Overrides Sub OnCreateSplashScreen()
+            Me.SplashScreen = Global.EagleZ_Computer_Shop.frm_splashscreen_a174652
         End Sub
     End Class
 End Namespace
