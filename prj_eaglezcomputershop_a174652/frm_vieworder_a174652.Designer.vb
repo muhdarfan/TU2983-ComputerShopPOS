@@ -46,13 +46,15 @@ Partial Class frm_vieworder_a174652
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cbox_order_list = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.lbl_staff = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'backBtn
         '
-        Me.backBtn.Location = New System.Drawing.Point(12, 633)
+        Me.backBtn.Location = New System.Drawing.Point(12, 648)
         Me.backBtn.Name = "backBtn"
         Me.backBtn.Size = New System.Drawing.Size(66, 26)
         Me.backBtn.TabIndex = 7
@@ -62,6 +64,8 @@ Partial Class frm_vieworder_a174652
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.lbl_staff)
+        Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.TableLayoutPanel1)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.lbl_order_date)
@@ -74,7 +78,7 @@ Partial Class frm_vieworder_a174652
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(704, 578)
+        Me.Panel1.Size = New System.Drawing.Size(704, 595)
         Me.Panel1.TabIndex = 8
         '
         'TableLayoutPanel1
@@ -84,7 +88,7 @@ Partial Class frm_vieworder_a174652
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.93822!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.06178!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label7, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label8, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.lbl_item_list, 0, 1)
@@ -111,7 +115,7 @@ Partial Class frm_vieworder_a174652
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(6, 3)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(291, 44)
+        Me.Label7.Size = New System.Drawing.Size(289, 44)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Item(s)"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -120,9 +124,9 @@ Partial Class frm_vieworder_a174652
         '
         Me.Label8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(306, 3)
+        Me.Label8.Location = New System.Drawing.Point(304, 3)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(116, 44)
+        Me.Label8.Size = New System.Drawing.Size(114, 44)
         Me.Label8.TabIndex = 1
         Me.Label8.Text = "Quantity"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -133,7 +137,7 @@ Partial Class frm_vieworder_a174652
         Me.lbl_item_list.Location = New System.Drawing.Point(6, 50)
         Me.lbl_item_list.Name = "lbl_item_list"
         Me.lbl_item_list.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.lbl_item_list.Size = New System.Drawing.Size(291, 189)
+        Me.lbl_item_list.Size = New System.Drawing.Size(289, 189)
         Me.lbl_item_list.TabIndex = 2
         Me.lbl_item_list.Text = "Unknown"
         '
@@ -141,7 +145,7 @@ Partial Class frm_vieworder_a174652
         '
         Me.Label10.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(431, 3)
+        Me.Label10.Location = New System.Drawing.Point(427, 3)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(118, 44)
         Me.Label10.TabIndex = 3
@@ -152,9 +156,9 @@ Partial Class frm_vieworder_a174652
         '
         Me.Label11.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(558, 3)
+        Me.Label11.Location = New System.Drawing.Point(554, 3)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(116, 44)
+        Me.Label11.Size = New System.Drawing.Size(120, 44)
         Me.Label11.TabIndex = 4
         Me.Label11.Text = "Total" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(RM)"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -162,10 +166,10 @@ Partial Class frm_vieworder_a174652
         'lbl_item_qty
         '
         Me.lbl_item_qty.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbl_item_qty.Location = New System.Drawing.Point(306, 50)
+        Me.lbl_item_qty.Location = New System.Drawing.Point(304, 50)
         Me.lbl_item_qty.Name = "lbl_item_qty"
         Me.lbl_item_qty.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.lbl_item_qty.Size = New System.Drawing.Size(116, 189)
+        Me.lbl_item_qty.Size = New System.Drawing.Size(114, 189)
         Me.lbl_item_qty.TabIndex = 5
         Me.lbl_item_qty.Text = "1 unit"
         Me.lbl_item_qty.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -173,7 +177,7 @@ Partial Class frm_vieworder_a174652
         'lbl_item_unit_price
         '
         Me.lbl_item_unit_price.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbl_item_unit_price.Location = New System.Drawing.Point(431, 50)
+        Me.lbl_item_unit_price.Location = New System.Drawing.Point(427, 50)
         Me.lbl_item_unit_price.Name = "lbl_item_unit_price"
         Me.lbl_item_unit_price.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
         Me.lbl_item_unit_price.Size = New System.Drawing.Size(118, 189)
@@ -184,10 +188,10 @@ Partial Class frm_vieworder_a174652
         'lbl_item_subtotal
         '
         Me.lbl_item_subtotal.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbl_item_subtotal.Location = New System.Drawing.Point(558, 50)
+        Me.lbl_item_subtotal.Location = New System.Drawing.Point(554, 50)
         Me.lbl_item_subtotal.Name = "lbl_item_subtotal"
         Me.lbl_item_subtotal.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.lbl_item_subtotal.Size = New System.Drawing.Size(116, 189)
+        Me.lbl_item_subtotal.Size = New System.Drawing.Size(120, 189)
         Me.lbl_item_subtotal.TabIndex = 7
         Me.lbl_item_subtotal.Text = "RM 0.00"
         Me.lbl_item_subtotal.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -195,9 +199,9 @@ Partial Class frm_vieworder_a174652
         'lbl_total_price
         '
         Me.lbl_total_price.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbl_total_price.Location = New System.Drawing.Point(558, 242)
+        Me.lbl_total_price.Location = New System.Drawing.Point(554, 242)
         Me.lbl_total_price.Name = "lbl_total_price"
-        Me.lbl_total_price.Size = New System.Drawing.Size(116, 44)
+        Me.lbl_total_price.Size = New System.Drawing.Size(120, 44)
         Me.lbl_total_price.TabIndex = 11
         Me.lbl_total_price.Text = "RM 0.00"
         Me.lbl_total_price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -210,7 +214,7 @@ Partial Class frm_vieworder_a174652
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.Location = New System.Drawing.Point(6, 242)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(543, 44)
+        Me.Label17.Size = New System.Drawing.Size(539, 44)
         Me.Label17.TabIndex = 10
         Me.Label17.Text = "Total"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -300,7 +304,7 @@ Partial Class frm_vieworder_a174652
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 581)
+        Me.Label1.Location = New System.Drawing.Point(12, 601)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(78, 20)
         Me.Label1.TabIndex = 9
@@ -310,10 +314,29 @@ Partial Class frm_vieworder_a174652
         '
         Me.cbox_order_list.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbox_order_list.FormattingEnabled = True
-        Me.cbox_order_list.Location = New System.Drawing.Point(96, 581)
+        Me.cbox_order_list.Location = New System.Drawing.Point(96, 601)
         Me.cbox_order_list.Name = "cbox_order_list"
         Me.cbox_order_list.Size = New System.Drawing.Size(121, 21)
         Me.cbox_order_list.TabIndex = 10
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label9.Location = New System.Drawing.Point(18, 561)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(42, 13)
+        Me.Label9.TabIndex = 16
+        Me.Label9.Text = "Staff :"
+        '
+        'lbl_staff
+        '
+        Me.lbl_staff.AutoSize = True
+        Me.lbl_staff.Location = New System.Drawing.Point(66, 561)
+        Me.lbl_staff.Name = "lbl_staff"
+        Me.lbl_staff.Size = New System.Drawing.Size(53, 13)
+        Me.lbl_staff.TabIndex = 17
+        Me.lbl_staff.Text = "Unknown"
         '
         'frm_vieworder_a174652
         '
@@ -321,7 +344,7 @@ Partial Class frm_vieworder_a174652
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.EagleZ_Computer_Shop.My.Resources.Resources.bg_app2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(704, 741)
+        Me.ClientSize = New System.Drawing.Size(704, 766)
         Me.Controls.Add(Me.cbox_order_list)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
@@ -364,4 +387,6 @@ Partial Class frm_vieworder_a174652
     Friend WithEvents lbl_item_subtotal As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents lbl_total_price As Label
+    Friend WithEvents lbl_staff As Label
+    Friend WithEvents Label9 As Label
 End Class
