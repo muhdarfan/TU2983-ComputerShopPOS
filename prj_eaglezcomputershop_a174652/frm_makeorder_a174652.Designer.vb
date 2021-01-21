@@ -22,11 +22,9 @@ Partial Class frm_makeorder_a174652
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_makeorder_a174652))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.lb_product_items = New System.Windows.Forms.ListBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.tb_search = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.cb_staff = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -55,7 +53,6 @@ Partial Class frm_makeorder_a174652
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lbl_cart_total = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.btn_confirm = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
@@ -68,7 +65,6 @@ Partial Class frm_makeorder_a174652
         Me.lbl_subtotal = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
-        Me.TableLayoutPanel6.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.grid_cart, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,7 +83,7 @@ Partial Class frm_makeorder_a174652
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.TableLayoutPanel6)
+        Me.GroupBox1.Controls.Add(Me.lb_product_items)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 168)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(226, 341)
@@ -95,52 +91,15 @@ Partial Class frm_makeorder_a174652
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Choose Item"
         '
-        'TableLayoutPanel6
-        '
-        Me.TableLayoutPanel6.ColumnCount = 1
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel6.Controls.Add(Me.lb_product_items, 0, 0)
-        Me.TableLayoutPanel6.Controls.Add(Me.Label11, 0, 1)
-        Me.TableLayoutPanel6.Controls.Add(Me.tb_search, 0, 2)
-        Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel6.Location = New System.Drawing.Point(3, 16)
-        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
-        Me.TableLayoutPanel6.RowCount = 3
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.30986!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.690141!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37.0!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(220, 322)
-        Me.TableLayoutPanel6.TabIndex = 1
-        '
         'lb_product_items
         '
         Me.lb_product_items.Cursor = System.Windows.Forms.Cursors.Default
         Me.lb_product_items.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lb_product_items.FormattingEnabled = True
-        Me.lb_product_items.Location = New System.Drawing.Point(3, 3)
+        Me.lb_product_items.Location = New System.Drawing.Point(3, 16)
         Me.lb_product_items.Name = "lb_product_items"
-        Me.lb_product_items.Size = New System.Drawing.Size(214, 259)
+        Me.lb_product_items.Size = New System.Drawing.Size(220, 322)
         Me.lb_product_items.TabIndex = 0
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label11.Location = New System.Drawing.Point(3, 265)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(214, 19)
-        Me.Label11.TabIndex = 1
-        Me.Label11.Text = "Search"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'tb_search
-        '
-        Me.tb_search.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tb_search.Location = New System.Drawing.Point(3, 287)
-        Me.tb_search.Name = "tb_search"
-        Me.tb_search.Size = New System.Drawing.Size(214, 20)
-        Me.tb_search.TabIndex = 2
         '
         'GroupBox2
         '
@@ -432,8 +391,7 @@ Partial Class frm_makeorder_a174652
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Label4, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.lbl_cart_total, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Button1, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.btn_confirm, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.btn_confirm, 0, 1)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 16)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -465,23 +423,14 @@ Partial Class frm_makeorder_a174652
         Me.lbl_cart_total.Text = "RM 0.00"
         Me.lbl_cart_total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button1
-        '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.Location = New System.Drawing.Point(3, 58)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(137, 53)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "View Order"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'btn_confirm
         '
+        Me.TableLayoutPanel2.SetColumnSpan(Me.btn_confirm, 2)
         Me.btn_confirm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btn_confirm.Enabled = False
-        Me.btn_confirm.Location = New System.Drawing.Point(146, 58)
+        Me.btn_confirm.Location = New System.Drawing.Point(3, 58)
         Me.btn_confirm.Name = "btn_confirm"
-        Me.btn_confirm.Size = New System.Drawing.Size(137, 53)
+        Me.btn_confirm.Size = New System.Drawing.Size(280, 53)
         Me.btn_confirm.TabIndex = 3
         Me.btn_confirm.Text = "Confirm"
         Me.btn_confirm.UseVisualStyleBackColor = True
@@ -626,13 +575,12 @@ Partial Class frm_makeorder_a174652
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frm_makeorder_a174652"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "EagleZ Computer Shop: Add Order"
         Me.GroupBox1.ResumeLayout(False)
-        Me.TableLayoutPanel6.ResumeLayout(False)
-        Me.TableLayoutPanel6.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -681,7 +629,6 @@ Partial Class frm_makeorder_a174652
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Label4 As Label
     Friend WithEvents lbl_cart_total As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents btn_confirm As Button
     Friend WithEvents lbl_product_stock As Label
     Friend WithEvents GroupBox5 As GroupBox
@@ -695,9 +642,6 @@ Partial Class frm_makeorder_a174652
     Friend WithEvents btn_add_cart As Button
     Friend WithEvents tb_order_id As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
-    Friend WithEvents Label11 As Label
-    Friend WithEvents tb_search As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents cb_staff As ComboBox
     Friend WithEvents Label13 As Label

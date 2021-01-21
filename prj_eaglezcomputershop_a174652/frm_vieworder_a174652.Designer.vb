@@ -84,7 +84,7 @@ Partial Class frm_vieworder_a174652
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.93822!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.06178!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label7, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label8, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.lbl_item_list, 0, 1)
@@ -111,7 +111,7 @@ Partial Class frm_vieworder_a174652
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(6, 3)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(294, 44)
+        Me.Label7.Size = New System.Drawing.Size(291, 44)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Item(s)"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -120,9 +120,9 @@ Partial Class frm_vieworder_a174652
         '
         Me.Label8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(309, 3)
+        Me.Label8.Location = New System.Drawing.Point(306, 3)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(117, 44)
+        Me.Label8.Size = New System.Drawing.Size(116, 44)
         Me.Label8.TabIndex = 1
         Me.Label8.Text = "Quantity"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -133,7 +133,7 @@ Partial Class frm_vieworder_a174652
         Me.lbl_item_list.Location = New System.Drawing.Point(6, 50)
         Me.lbl_item_list.Name = "lbl_item_list"
         Me.lbl_item_list.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.lbl_item_list.Size = New System.Drawing.Size(294, 189)
+        Me.lbl_item_list.Size = New System.Drawing.Size(291, 189)
         Me.lbl_item_list.TabIndex = 2
         Me.lbl_item_list.Text = "Unknown"
         '
@@ -141,7 +141,7 @@ Partial Class frm_vieworder_a174652
         '
         Me.Label10.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(435, 3)
+        Me.Label10.Location = New System.Drawing.Point(431, 3)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(118, 44)
         Me.Label10.TabIndex = 3
@@ -152,9 +152,9 @@ Partial Class frm_vieworder_a174652
         '
         Me.Label11.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(562, 3)
+        Me.Label11.Location = New System.Drawing.Point(558, 3)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(112, 44)
+        Me.Label11.Size = New System.Drawing.Size(116, 44)
         Me.Label11.TabIndex = 4
         Me.Label11.Text = "Total" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(RM)"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -162,10 +162,10 @@ Partial Class frm_vieworder_a174652
         'lbl_item_qty
         '
         Me.lbl_item_qty.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbl_item_qty.Location = New System.Drawing.Point(309, 50)
+        Me.lbl_item_qty.Location = New System.Drawing.Point(306, 50)
         Me.lbl_item_qty.Name = "lbl_item_qty"
         Me.lbl_item_qty.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.lbl_item_qty.Size = New System.Drawing.Size(117, 189)
+        Me.lbl_item_qty.Size = New System.Drawing.Size(116, 189)
         Me.lbl_item_qty.TabIndex = 5
         Me.lbl_item_qty.Text = "1 unit"
         Me.lbl_item_qty.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -173,7 +173,7 @@ Partial Class frm_vieworder_a174652
         'lbl_item_unit_price
         '
         Me.lbl_item_unit_price.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbl_item_unit_price.Location = New System.Drawing.Point(435, 50)
+        Me.lbl_item_unit_price.Location = New System.Drawing.Point(431, 50)
         Me.lbl_item_unit_price.Name = "lbl_item_unit_price"
         Me.lbl_item_unit_price.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
         Me.lbl_item_unit_price.Size = New System.Drawing.Size(118, 189)
@@ -184,10 +184,10 @@ Partial Class frm_vieworder_a174652
         'lbl_item_subtotal
         '
         Me.lbl_item_subtotal.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbl_item_subtotal.Location = New System.Drawing.Point(562, 50)
+        Me.lbl_item_subtotal.Location = New System.Drawing.Point(558, 50)
         Me.lbl_item_subtotal.Name = "lbl_item_subtotal"
         Me.lbl_item_subtotal.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.lbl_item_subtotal.Size = New System.Drawing.Size(112, 189)
+        Me.lbl_item_subtotal.Size = New System.Drawing.Size(116, 189)
         Me.lbl_item_subtotal.TabIndex = 7
         Me.lbl_item_subtotal.Text = "RM 0.00"
         Me.lbl_item_subtotal.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -195,9 +195,9 @@ Partial Class frm_vieworder_a174652
         'lbl_total_price
         '
         Me.lbl_total_price.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbl_total_price.Location = New System.Drawing.Point(562, 242)
+        Me.lbl_total_price.Location = New System.Drawing.Point(558, 242)
         Me.lbl_total_price.Name = "lbl_total_price"
-        Me.lbl_total_price.Size = New System.Drawing.Size(112, 44)
+        Me.lbl_total_price.Size = New System.Drawing.Size(116, 44)
         Me.lbl_total_price.TabIndex = 11
         Me.lbl_total_price.Text = "RM 0.00"
         Me.lbl_total_price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -210,7 +210,7 @@ Partial Class frm_vieworder_a174652
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.Location = New System.Drawing.Point(6, 242)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(547, 44)
+        Me.Label17.Size = New System.Drawing.Size(543, 44)
         Me.Label17.TabIndex = 10
         Me.Label17.Text = "Total"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight

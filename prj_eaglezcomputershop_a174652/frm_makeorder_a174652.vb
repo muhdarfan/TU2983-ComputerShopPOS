@@ -2,7 +2,6 @@
     Dim sData As DataTable
 
     Private Sub frm_insertorder_a174652_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         LoadCustomer()
         LoadStaff()
         LoadProduct()
@@ -11,6 +10,11 @@
     End Sub
 
     Private Sub btn_add_cart_Click(sender As Object, e As EventArgs) Handles btn_add_cart.Click
+        If box_quantity.Value = 0 Then
+            MsgBox("Sorry but the item is not in stock. Please try again later...")
+            Return
+        End If
+
         For Each row As DataGridViewRow In grid_cart.Rows
             If row.Cells(0).Value = tb_order_id.Text And row.Cells(1).Value = lbl_product_id.Text Then
                 Dim newQuantity As Integer = row.Cells(2).Value + box_quantity.Value
@@ -57,13 +61,18 @@
             Dim orderWriter As New OleDb.OleDbCommand("INSERT INTO TBL_ORDER_A174652 VALUES ('" & odrID & "', " & customerID & ", " & staffID & ", NOW())", connection2, purchaseTransaction)
             orderWriter.ExecuteNonQuery()
 
+            ' Insert Order Details
             For Each row As DataGridViewRow In grid_cart.Rows
                 Dim rOdrID = row.Cells(0).Value
                 Dim productID = Integer.Parse(Mid(row.Cells(1).Value, 4))
                 Dim qty = Integer.Parse(row.Cells(2).Value)
-                Dim fprice = Double.Parse(Mid(row.Cells(3).Value, 3))
 
-                orderWriter = New OleDb.OleDbCommand("INSERT INTO TBL_ORDERDETAILS_A174652 VALUES (" & odrID & ", " & productID & ", " & qty & ", " & fprice & ")", connection2, purchaseTransaction)
+                ' INSERT
+                orderWriter = New OleDb.OleDbCommand("INSERT INTO TBL_ORDERDETAILS_A174652 VALUES (" & odrID & ", " & productID & ", " & qty & ")", connection2, purchaseTransaction)
+                orderWriter.ExecuteNonQuery()
+
+                ' UPDATE
+                orderWriter = New OleDb.OleDbCommand("UPDATE TBL_PRODUCTS_A174652 SET FLD_STOCK=(FLD_STOCK - " & qty & ") WHERE FLD_PRODUCT_ID=" & productID, connection2, purchaseTransaction)
                 orderWriter.ExecuteNonQuery()
             Next
 
@@ -173,10 +182,14 @@
     End Sub
 
     Private Sub LoadHeader()
-        Dim cardHeaderDT As DataColumnCollection = run_sql_query("SELECT * FROM TBL_ORDERDETAILS_A174652").Columns
-        For i = 0 To cardHeaderDT.Count - 1
-            grid_cart.Columns.Add(cardHeaderDT(i).ColumnName, cardHeaderDT(i).ColumnName)
-        Next
+        'Dim cardHeaderDT As DataColumnCollection = run_sql_query("SELECT * FROM TBL_ORDERDETAILS_A174652").Columns
+        'For i = 0 To cardHeaderDT.Count - 1
+        '    grid_cart.Columns.Add(cardHeaderDT(i).ColumnName, cardHeaderDT(i).ColumnName)
+        'Next
+        grid_cart.Columns.Add("FLD_ORDER_ID", "Order ID")
+        grid_cart.Columns.Add("FLD_PRODUCT_ID", "Product ID")
+        grid_cart.Columns.Add("FLD_PRODUCT_QTY", "Quantity")
+        grid_cart.Columns.Add("FLD_SUBTOTAL", "Sub Total")
     End Sub
 
     Private Sub ResetAll()
@@ -199,9 +212,6 @@
 
     End Sub
 
-    Private Sub tb_search_KeyUp(sender As Object, e As KeyEventArgs) Handles tb_search.KeyUp
-    End Sub
-
     Private Sub grid_cart_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles grid_cart.CellValueChanged
         RefreshTotal()
     End Sub
@@ -212,5 +222,9 @@
 
     Private Sub grid_cart_RowsRemoved(sender As Object, e As DataGridViewRowsRemovedEventArgs) Handles grid_cart.RowsRemoved
         RefreshTotal()
+    End Sub
+
+    Private Sub frm_makeorder_a174652_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Me.Dispose()
     End Sub
 End Class
